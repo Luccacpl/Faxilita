@@ -1,0 +1,93 @@
+#page-login {
+	width: 50vh;
+	height: 65vh;
+	background-color: #bd056d;
+
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 35px;
+
+	margin: 15vh auto;
+}
+
+#page-login main h1 {
+	padding-top: 5vh;
+
+	text-align: center;
+
+	font-size: 7vh;
+
+	font-weight: 800;
+	line-height: 70px;
+}
+
+#page-login .conteudo {
+	width: 100%;
+	height: 45%;
+
+	margin-top: 5%;
+}
+
+input {
+	width: 75%;
+	height: 6.7vh;
+	padding: 0 10px;
+
+	border: 0.5px solid black;
+	border-radius: 24px;
+
+	outline: none;
+
+	margin: 4% 12.5%;
+
+	font-size: 100%;
+}
+
+.conteudo .link {
+	color: white;
+	text-decoration: none;
+
+	font-size: 2vh;
+	font-weight: 800;
+	font-style: italic;
+
+	margin-left: 5vh;
+	padding-right: 0px;
+}
+
+#page-login .btnCadastro {
+	height: 6.7vh;
+	width: 75%;
+
+	background: #ff6181;
+	border: 0.5px solid black;
+	border-radius: 20px;
+
+	color: white;
+	font-size: 2.5vh;
+	font-weight: 800;
+
+	cursor: pointer;
+	outline: none;
+
+	margin: 4% 12.5%;
+}
+
+#page-login .btnLogin {
+	height: 6.7vh;
+	width: 75%;
+
+	background: #1752de;
+	border: 0.5px solid black;
+	border-radius: 20px;
+
+	color: white;
+	font-size: 2.5vh;
+	font-weight: 800;
+
+	cursor: pointer;
+	outline: none;
+
+	margin: 0px 12.5%;
+}

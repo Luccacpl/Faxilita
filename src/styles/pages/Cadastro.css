@@ -1,0 +1,57 @@
+#page-cadastro {
+	width: 50vh;
+	height: 100%;
+	background-color: #bd056d;
+
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 25px;
+
+	margin: 35vh auto;
+}
+
+#page-cadastro h1 {
+	padding-top: 0.5vh;
+
+	text-align: center;
+
+	font-size: 2.5vh;
+
+	font-weight: 800;
+	line-height: 50px;
+}
+
+#page-cadastro .btnContratante {
+	height: 4.5vh;
+	width: 35%;
+
+	background: #1752de;
+	border: 0.5px solid black;
+	border-radius: 20px;
+
+	color: white;
+	font-size: 2vh;
+	font-weight: 800;
+
+	cursor: pointer;
+	outline: none;
+
+	margin: 2% 5% 6% 12.5%;
+}
+
+#page-cadastro .btnTrabalhador {
+	height: 4.5vh;
+	width: 35%;
+
+	background: #1752de;
+	border: 0.5px solid black;
+	border-radius: 20px;
+
+	color: white;
+	font-size: 2vh;
+	font-weight: 800;
+
+	cursor: pointer;
+	outline: none;
+}

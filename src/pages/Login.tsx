@@ -1,22 +1,28 @@
 import React from 'react';
 import { Link, } from 'react-router-dom';
 
+import '../styles/pages/Login.css';
+
 function Login(){
     return(
-        <div>
-            <h1>Faxilita</h1>
+        <div id="page-login">
+            <main>
+                <h1>Faxilita</h1>
+            </main>
 
-                <input id="username"/>
-                <input id="password"/>
-                <Link to="">
+            <div className="conteudo">
+                <input id="username" placeholder="Username" />
+                <input id="password" type="password" placeholder="Password"/>
+                <Link to="/" className="link">
                     Esqueceu a senha?
                 </Link>
-                <Link to="">
+                <Link to="/cadastro" className="link">
                     Ainda não é membro?
                 </Link>
+            </div>
 
-                <button> Login </button>
-                <button> Cadastre-se </button>
+                <button className="btnLogin"> Login </button>
+                <button className="btnCadastro"> Cadastre-se </button>
 
         </div>
     );
