@@ -37,7 +37,7 @@ function Login(){
                 <Grid item xs={12}>
                     <input  type="password" placeholder="Password"/>
                     <aside className="asideEsquerda">
-                        <Link to="/" className="link1">
+                        <Link to="/RecuperarSenha" className="link1">
                             <p>Esqueceu a senha?</p>
                         </Link>
                     </aside>
@@ -54,7 +54,9 @@ function Login(){
                 </Grid>
                 
                 <Grid item xs={12}>
-                    <Button variant="contained" color="primary" className="btnCadastro">Cadastro</Button>
+                    <Link to="/cadastro" className="link2">
+                        <Button variant="contained" color="primary" className="btnCadastro">Cadastro</Button>
+                    </Link>
                 </Grid>
 
             </Grid>

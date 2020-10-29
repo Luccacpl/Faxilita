@@ -39,6 +39,10 @@
 	border-radius: 20px;
 }
 
+.link1 {
+	text-decoration: none;
+}
+
 .page-cadastro .btnTrabalhador {
 	background-image: linear-gradient(
 		90deg,

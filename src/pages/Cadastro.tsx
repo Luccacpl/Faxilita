@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { Link, } from 'react-router-dom';
 
 import '../styles/pages/Cadastro.css'
 
@@ -29,11 +30,15 @@ function Cadastro() {
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                    <Button variant="contained" color="primary" className="btnContratante">Contratante</Button>
+                   <Link to="/cadastro/1" className="link1">
+                      <Button variant="contained" color="primary" className="btnContratante">Contratante</Button>
+                    </Link>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                <Button variant="contained" color="primary" className="btnTrabalhador">Trabalhador</Button>
+                  <Link to="/cadastro/2" className="link1">
+                    <Button variant="contained" color="primary" className="btnTrabalhador">Trabalhador</Button>
+                  </Link>     
                 </Grid>
 
                 <Grid item xs={12}></Grid>
