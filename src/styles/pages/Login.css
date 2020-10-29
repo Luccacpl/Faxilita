@@ -22,6 +22,11 @@
 	margin-top: 20px;
 }
 
+.page-login .txtPassword {
+	border-radius: 17px;
+	outline: none;
+}
+
 input {
 	width: 75%;
 	height: 6.3vh;
