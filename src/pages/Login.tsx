@@ -1,29 +1,62 @@
 import React from 'react';
 import { Link, } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 import '../styles/pages/Login.css';
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    title: {
+        textAlign: 'center',
+      },
+  }),
+);
+
 function Login(){
+    const classes = useStyles();
+
     return(
-        <div id="page-login">
-            <main>
-                <h1>Faxilita</h1>
-            </main>
+        <div className={`${classes.root} page-login`}>
 
-            <div className="conteudo">
-                <input id="username" placeholder="Username" />
-                <input id="password" type="password" placeholder="Password"/>
-                <Link to="/" className="link">
-                    Esqueceu a senha?
-                </Link>
-                <Link to="/cadastro" className="link">
-                    Ainda não é membro?
-                </Link>
-            </div>
+            <Grid container spacing={3}>
 
-                <button className="btnLogin"> Login </button>
-                <button className="btnCadastro"> Cadastre-se </button>
+                <Grid item xs={12}>
+                    <h1 className={classes.title}>Faxilita</h1>
+                </Grid>
 
+                <Grid item xs={12}>
+                    <input  placeholder="Username" />
+                </Grid>
+
+                <Grid item xs={12}>
+                    <input  type="password" placeholder="Password"/>
+                    <aside className="asideEsquerda">
+                        <Link to="/" className="link1">
+                            <p>Esqueceu a senha?</p>
+                        </Link>
+                    </aside>
+                    
+                    <aside className="asideDireita">
+                        <Link to="/cadastro" className="link2">
+                            <p>Ainda não é membro?</p>
+                        </Link>
+                    </aside>
+                </Grid>
+
+                <Grid item xs={12}>
+                    <Button variant="contained" color="primary" className="btnLogin">Login</Button>
+                </Grid>
+                
+                <Grid item xs={12}>
+                    <Button variant="contained" color="primary" className="btnCadastro">Cadastro</Button>
+                </Grid>
+
+            </Grid>
         </div>
     );
 }

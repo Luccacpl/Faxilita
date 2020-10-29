@@ -1,7 +1,13 @@
-#page-cadastro {
-	width: 50vh;
+.page-cadastro {
+	width: 60vh;
 	height: 100%;
-	background-color: #bd056d;
+	background: linear-gradient(
+		170deg,
+		rgba(189, 5, 109, 1) 0%,
+		rgba(189, 5, 109, 1) 48%,
+		rgba(196, 17, 118, 1) 100%
+	);
+	box-shadow: 3px 5px 5px 5px rgba(248, 10, 89, 0.3);
 
 	justify-content: center;
 	align-items: center;
@@ -9,49 +15,37 @@
 	border-radius: 25px;
 
 	margin: 35vh auto;
-}
-
-#page-cadastro h1 {
-	padding-top: 0.5vh;
 
 	text-align: center;
 
-	font-size: 2.5vh;
+	max-width: 450px;
+}
+
+.page-cadastro h1 {
+	font-size: 3vh;
 
 	font-weight: 800;
 	line-height: 50px;
 }
 
-#page-cadastro .btnContratante {
-	height: 4.5vh;
-	width: 35%;
-
-	background: #1752de;
-	border: 0.5px solid black;
+.page-cadastro .btnContratante {
+	background-image: linear-gradient(
+		90deg,
+		rgba(23, 82, 222, 1) 0%,
+		rgba(23, 82, 222, 1) 43%,
+		rgba(29, 91, 242, 1) 100%
+	);
+	box-shadow: 0 3px 5px 2px rgba(33, 203, 243, 0.3);
 	border-radius: 20px;
-
-	color: white;
-	font-size: 2vh;
-	font-weight: 800;
-
-	cursor: pointer;
-	outline: none;
-
-	margin: 2% 5% 6% 12.5%;
 }
 
-#page-cadastro .btnTrabalhador {
-	height: 4.5vh;
-	width: 35%;
-
-	background: #1752de;
-	border: 0.5px solid black;
+.page-cadastro .btnTrabalhador {
+	background-image: linear-gradient(
+		90deg,
+		rgba(23, 82, 222, 1) 0%,
+		rgba(23, 82, 222, 1) 43%,
+		rgba(29, 91, 242, 1) 100%
+	);
+	box-shadow: 0 3px 5px 2px rgba(33, 203, 243, 0.3);
 	border-radius: 20px;
-
-	color: white;
-	font-size: 2vh;
-	font-weight: 800;
-
-	cursor: pointer;
-	outline: none;
 }

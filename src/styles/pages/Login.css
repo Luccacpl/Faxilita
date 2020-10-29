@@ -1,93 +1,113 @@
-#page-login {
+.page-login {
 	width: 50vh;
-	height: 65vh;
-	background-color: #bd056d;
+	height: 100%;
+	background: linear-gradient(
+		170deg,
+		rgba(189, 5, 109, 1) 0%,
+		rgba(189, 5, 109, 1) 48%,
+		rgba(196, 17, 118, 1) 100%
+	);
+	box-shadow: 3px 5px 5px 5px rgba(248, 10, 89, 0.3);
 
 	justify-content: center;
 	align-items: center;
 
-	border-radius: 35px;
+	border-radius: 25px;
 
 	margin: 15vh auto;
 }
 
-#page-login main h1 {
-	padding-top: 5vh;
-
-	text-align: center;
-
-	font-size: 7vh;
-
-	font-weight: 800;
+.page-login h1 {
 	line-height: 70px;
-}
-
-#page-login .conteudo {
-	width: 100%;
-	height: 45%;
-
-	margin-top: 5%;
+	margin-top: 20px;
 }
 
 input {
 	width: 75%;
-	height: 6.7vh;
+	height: 6.3vh;
 	padding: 0 10px;
 
-	border: 0.5px solid black;
-	border-radius: 24px;
+	border: 0.5px solid grey;
+	border-radius: 17px;
 
 	outline: none;
 
-	margin: 4% 12.5%;
+	margin: auto 12.5%;
 
 	font-size: 100%;
 }
 
-.conteudo .link {
+.link1 {
+	color: white;
+	text-decoration: none;
+
+	font-size: 2vh;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.asideEsquerda {
+	width: 50%;
+	float: left;
+	margin-top: 5px;
+}
+
+.asideEsquerda p {
+	text-align: right;
+	margin-right: 10px;
+}
+
+.asideDireita {
+	width: 50%;
+	float: right;
+	margin-top: 5px;
+}
+
+.link2 {
 	color: white;
 	text-decoration: none;
 
 	font-size: 2vh;
 	font-weight: 800;
 	font-style: italic;
-
-	margin-left: 5vh;
-	padding-right: 0px;
+	display: flex;
 }
 
-#page-login .btnCadastro {
-	height: 6.7vh;
+.page-login .btnLogin {
 	width: 75%;
+	height: 6.3vh;
 
-	background: #ff6181;
-	border: 0.5px solid black;
+	background-image: linear-gradient(
+		90deg,
+		rgba(23, 82, 222, 1) 0%,
+		rgba(23, 82, 222, 1) 43%,
+		rgba(29, 91, 242, 1) 100%
+	);
+	box-shadow: 0 3px 5px 2px rgba(0, 10, 12, 0.3);
 	border-radius: 20px;
 
 	color: white;
-	font-size: 2.5vh;
 	font-weight: 800;
 
-	cursor: pointer;
-	outline: none;
-
-	margin: 4% 12.5%;
+	margin: auto 12.5%;
 }
 
-#page-login .btnLogin {
-	height: 6.7vh;
+.page-login .btnCadastro {
 	width: 75%;
+	height: 6.3vh;
 
-	background: #1752de;
-	border: 0.5px solid black;
+	background: linear-gradient(
+		114deg,
+		rgba(255, 97, 129, 1) 0%,
+		rgba(255, 97, 129, 1) 50%,
+		rgba(255, 95, 128, 1) 100%
+	);
+	box-shadow: 0 3px 5px 2px rgba(0, 10, 12, 0.3);
 	border-radius: 20px;
 
 	color: white;
-	font-size: 2.5vh;
 	font-weight: 800;
 
-	cursor: pointer;
-	outline: none;
-
-	margin: 0px 12.5%;
+	margin: auto 12.5%;
+	margin-bottom: 20px;
 }
