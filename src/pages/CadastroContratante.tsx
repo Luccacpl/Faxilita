@@ -26,7 +26,7 @@ function CadastroContratante(){
         <div className="wrapper">
             <Grid container spacing={3}>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} className="fixed">
                     <h1 className={classes.Title}>Registrar novo Contratante</h1>
                 </Grid>
 
@@ -52,6 +52,11 @@ function CadastroContratante(){
 
                 <Grid item xs={12}>
                     <input  placeholder="CPF" />
+                </Grid>
+
+                
+                <Grid item xs={12}>
+                    <input type="date" placeholder="Data de nascimento" />
                 </Grid>
 
                 <Grid item xs={12}>

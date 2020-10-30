@@ -1,6 +1,6 @@
 .wrapper {
 	width: 55vh;
-	height: 100%;
+	height: 100vh;
 	background: linear-gradient(
 		170deg,
 		rgba(189, 5, 109, 1) 0%,
@@ -15,6 +15,9 @@
 	border-radius: 25px;
 
 	margin: 15vh auto;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .wrapper input {
