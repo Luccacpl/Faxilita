@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+import CustomButton from '../components/CustomButton';
+
 import '../styles/pages/Login.css';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -50,14 +52,14 @@ function Login(){
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Link to="/">
+                    <Link to="/" className="link2">
                         <Button variant="contained" color="primary" className="btnLogin">Login</Button>
                     </Link>
                 </Grid>
                 
                 <Grid item xs={12}>
                     <Link to="/cadastro" className="link2">
-                        <Button variant="contained" color="primary" className="btnCadastro">Cadastro</Button>
+                        <CustomButton text="Cadastrar" />
                     </Link>
                 </Grid>
 

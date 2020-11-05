@@ -6,6 +6,13 @@ import Button from '@material-ui/core/Button';
     return (
         <Button variant="contained" color="primary" className="btnCadastro">
             {props.text}
-        </Button>
+        </Button> 
     );
 } 
+
+
+/* */
+
+/*  <Button variant="contained" color="primary" style={props.style}>
+            {props.text}
+        </Button> */
