@@ -1,7 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+
+import CustomButton from '../components/CustomButton';
 
 import '../styles/pages/CadastroTrabalhador.css';
 
@@ -55,7 +56,7 @@ function CadastroTrabalhador(){
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Button variant="contained" color="primary" className="btnCadastro">Registrar</Button>
+                    <CustomButton text="Registrar" />
                 </Grid>
 
             </Grid>

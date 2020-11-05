@@ -50,7 +50,9 @@ function Login(){
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Button variant="contained" color="primary" className="btnLogin">Login</Button>
+                    <Link to="/">
+                        <Button variant="contained" color="primary" className="btnLogin">Login</Button>
+                    </Link>
                 </Grid>
                 
                 <Grid item xs={12}>
