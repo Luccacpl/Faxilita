@@ -19,6 +19,22 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
+const Botao = {
+  width: "75%",
+  height: "6.3vh",
+
+  boxShadow:" 0 2px 3px 2px rgba(33, 203, 243, 0.3)",
+  borderRadius:" 20px",
+  
+  color:" white",
+}
+
+const styleBlue = {
+  background: "linear-gradient(90deg,rgba(23, 82, 222, 1) 0%, rgba(23, 82, 222, 1) 43%, rgba(29, 91, 242, 1) 100%)",
+}
+
+
+
 function Cadastro() {
     const classes = useStyles();
 
@@ -32,13 +48,13 @@ function Cadastro() {
 
                 <Grid item xs={12} sm={6}>
                    <Link to="/cadastro/1" className="link1">
-                      <CustomButton text="Contratante"/>
+                      <CustomButton text="Contratante" style={Object.assign({}, Botao, styleBlue)}/>
                     </Link>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
                   <Link to="/cadastro/2" className="link1">
-                    <CustomButton text="trabalhador"/>
+                    <CustomButton text="trabalhador" style={Object.assign({}, Botao, styleBlue)}/>
                   </Link>     
                 </Grid>
 

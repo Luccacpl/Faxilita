@@ -19,6 +19,23 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+const Botao = {
+    width: "75%",
+    height: "6.3vh",
+
+    boxshadow: "0 3px 5px 2px rgba(0, 10, 12, 0.3)",
+    borderRadius:" 20px",
+    
+    color:" white",
+	fontWeight:" 800",
+
+	margin: "auto 12.5%",
+}
+
+const stylePink = {
+    background: "linear-gradient(114deg,rgba(255, 97, 129, 1) 0%, rgba(255, 97, 129, 1) 50%, rgba(255, 95, 128, 1) 100%)",
+    marginBottom:" 20px",
+}
 
 
 function CadastroContratante(){
@@ -62,7 +79,7 @@ function CadastroContratante(){
                 </Grid>
 
                 <Grid item xs={12}>
-                    <CustomButton text="Registrar"/>
+                    <CustomButton text="Registrar" style={Object.assign({}, Botao, stylePink)}/>
                 </Grid>
 
             </Grid>

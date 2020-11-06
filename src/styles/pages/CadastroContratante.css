@@ -20,6 +20,10 @@
 	overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+	width: 0px;
+}
+
 .wrapper input {
 	height: 6.3vh;
 	padding: 0 10px;
@@ -37,6 +41,7 @@
 }
 
 .wrapper h1 {
+	margin-top: 10px;
 	font-size: 3vh;
 
 	font-weight: 800;
@@ -51,23 +56,22 @@
 	margin-left: 0;
 }
 
-.wrapper .btnCadastro {
-	width: 75%;
-	height: 6.3vh;
+/* Telefones em paisagem e abaixo*/
 
-	background: linear-gradient(
-		114deg,
-		rgba(255, 97, 129, 1) 0%,
-		rgba(255, 97, 129, 1) 50%,
-		rgba(255, 95, 128, 1) 100%
-	);
-	box-shadow: 0 3px 5px 2px rgba(0, 10, 12, 0.3);
-	border-radius: 20px;
+@media screen and (min-width: 1080px) {
+	.wrapper {
+		max-height: 500px;
+	}
+}
 
-	color: white;
-	font-weight: 800;
+@media screen and (min-width: 1500px) {
+	.wrapper {
+		max-height: 800px;
+	}
+}
 
-	margin: auto 12.5%;
-	margin-bottom: 20px;
-	margin-top: 10px;
+@media screen and (max-width: 480px) {
+	.wrapper {
+		max-height: 470px;
+	}
 }

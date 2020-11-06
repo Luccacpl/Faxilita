@@ -47,24 +47,3 @@
 .wrapper .txtSobrenome {
 	margin-left: 0;
 }
-
-.wrapper .btnCadastro {
-	width: 75%;
-	height: 6.3vh;
-
-	background: linear-gradient(
-		114deg,
-		rgba(255, 97, 129, 1) 0%,
-		rgba(255, 97, 129, 1) 50%,
-		rgba(255, 95, 128, 1) 100%
-	);
-	box-shadow: 0 3px 5px 2px rgba(0, 10, 12, 0.3);
-	border-radius: 20px;
-
-	color: white;
-	font-weight: 800;
-
-	margin: auto 12.5%;
-	margin-bottom: 20px;
-	margin-top: 10px;
-}
