@@ -46,7 +46,7 @@ function EsqueceuSenha(){
     const classes = useStyles();
 
     return(
-        <div className="wrapper">
+        <div id="page-esqueceu-senha">
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <h1 className={classes.title}>Recuperar sua senha</h1>

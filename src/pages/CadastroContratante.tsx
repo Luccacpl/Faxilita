@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import { FiPlus } from 'react-icons/fi';
 
 import CustomButton from '../components/CustomButton';
 
@@ -41,57 +42,90 @@ const stylePink = {
 function CadastroContratante(){
     const classes = useStyles();
 
+    const [images, setImages] = useState<File[]>([]);
+    const [previewImages, setPreviewImages] = useState<string[]>([]);
+
+    function handleSelectedImages(event: ChangeEvent<HTMLInputElement>) {
+        if(!event.target.files){
+            return;
+        }
+
+        const selectedImages = Array.from(event.target.files);
+
+        setImages(selectedImages);
+
+        const selectedImagesPreview = selectedImages.map(image => {
+            return URL.createObjectURL(image);
+          });
+      
+        setPreviewImages(selectedImagesPreview);
+    }
+
     return(
-        <div className="wrapper">
-            <Grid container spacing={3}>
+        <div id="page-cadastro-contratante">
+            <form className="wrapper">
+                <Grid container spacing={3}>
 
-                <Grid item xs={12} className="fixed">
-                    <h1 className={classes.Title}>Registrar novo Contratante</h1>
+                    <Grid item xs={12} className="fixed">
+                            <h1 className={classes.Title}>Registrar novo Contratante</h1>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                            <input className="txtNome" placeholder="Nome" />
+                    </Grid>
+
+                    <Grid item xs={6}> 
+                            <input className="txtSobrenome" placeholder="Sobrenome" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="email" placeholder="Email" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="email" placeholder="Confirmação de Email" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="password" placeholder="Senha" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="password" placeholder="Confirmação de senha" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input  placeholder="CPF" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="date" placeholder="Data de nascimento" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <label className="custom-file-upload">
+                            <FiPlus size={24} color="black"/>
+                            <input onChange={handleSelectedImages} type="file">
+                            </input>
+                        </label>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <CustomButton text="Registrar" style={Object.assign({}, Botao, stylePink)}/>
+                    </Grid>
+
                 </Grid>
-
-                <Grid item xs={6}>
-                    <input className="txtNome" placeholder="Nome" />
-                </Grid>
-
-                <Grid item xs={6}> 
-                    <input className="txtSobrenome" placeholder="Sobrenome" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="email" placeholder="Email" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="email" placeholder="Confirmação de Email" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="password" placeholder="Senha" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="password" placeholder="Confirmação de senha" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input  placeholder="CPF" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="date" placeholder="Data de nascimento" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="file"></input>
-                </Grid>
-
-                <Grid item xs={12}>
-                    <CustomButton text="Registrar" style={Object.assign({}, Botao, stylePink)}/>
-                </Grid>
-
-            </Grid>
+            </form>
         </div>
     );
 }
  
 export default CadastroContratante;
+
+/*<div className="images-container">
+                                {previewImages.map(image => {
+                                        return(
+                                            <img key={image} src={image} alt="imagem"/>
+                                        )
+                                    })}
+</div> */

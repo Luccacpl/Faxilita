@@ -41,42 +41,44 @@ function CadastroTrabalhador(){
     const classes = useStyles();
 
     return(
-        <div className="wrapper">
-            <Grid container spacing={3}>
+        <div id="page-cadastro-trabalhador">
+            <form className="wrapper">
+                <Grid container spacing={3}>
 
-                <Grid item xs={12}>
-                    <h1 className={classes.Title}>Registrar novo Trabalhador</h1>
+                    <Grid item xs={12}>
+                        <h1 className={classes.Title}>Registrar novo Trabalhador</h1>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                        <input className="txtNome" placeholder="Nome" />
+                    </Grid>
+
+                    <Grid item xs={6}> 
+                        <input className="txtSobrenome" placeholder="Sobrenome" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="email" placeholder="Email" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="password" placeholder="Senha" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input type="password" placeholder="Confirmação de senha" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <input  placeholder="CPF" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <CustomButton text="Registrar" style={Object.assign({}, Botao, stylePink)}/>
+                    </Grid>
+
                 </Grid>
-
-                <Grid item xs={6}>
-                    <input className="txtNome" placeholder="Nome" />
-                </Grid>
-
-                <Grid item xs={6}> 
-                    <input className="txtSobrenome" placeholder="Sobrenome" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="email" placeholder="Email" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="password" placeholder="Senha" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input type="password" placeholder="Confirmação de senha" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <input  placeholder="CPF" />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <CustomButton text="Registrar" style={Object.assign({}, Botao, stylePink)}/>
-                </Grid>
-
-            </Grid>
+            </form>
         </div>
     );
 }

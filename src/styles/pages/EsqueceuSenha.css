@@ -1,4 +1,4 @@
-.wrapper {
+#page-esqueceu-senha {
 	width: 50vh;
 	height: 100%;
 	background: linear-gradient(
@@ -17,7 +17,7 @@
 	margin: 15vh auto;
 }
 
-.wrapper h1 {
+#page-esqueceu-senha h1 {
 	line-height: 70px;
 }
 
