@@ -62,6 +62,10 @@ function CadastroContratante(){
                 </Grid>
 
                 <Grid item xs={12}>
+                    <input type="email" placeholder="Confirmação de Email" />
+                </Grid>
+
+                <Grid item xs={12}>
                     <input type="password" placeholder="Senha" />
                 </Grid>
 
@@ -73,9 +77,12 @@ function CadastroContratante(){
                     <input  placeholder="CPF" />
                 </Grid>
 
-                
                 <Grid item xs={12}>
                     <input type="date" placeholder="Data de nascimento" />
+                </Grid>
+
+                <Grid item xs={12}>
+                    <input type="file"></input>
                 </Grid>
 
                 <Grid item xs={12}>
