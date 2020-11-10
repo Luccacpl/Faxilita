@@ -1,27 +1,71 @@
-#page-cadastro-contratante .wrapper {
-	width: 55vh;
-	height: 100vh;
+#page-cadastro-contratante {
+	background-color: white;
+	display: flex;
+	width: 100vw;
+}
+
+/* Aside */
+
+aside.app-sidebar {
+	position: fixed;
+	height: 100%;
+	width: 10%;
+	padding: 32px 24px;
 	background: linear-gradient(
 		170deg,
 		rgba(189, 5, 109, 1) 0%,
 		rgba(189, 5, 109, 1) 48%,
 		rgba(196, 17, 118, 1) 100%
 	);
-	box-shadow: 3px 5px 5px 5px rgba(248, 10, 89, 0.3);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+aside.app-sidebar footer a,
+aside.app-sidebar footer button {
+	width: 60px;
+	height: 60px;
+
+	background: #d00176;
+	border: 0;
+	border-radius: 25px;
+
+	cursor: pointer;
+
+	transition: background-color 0.2s;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+aside.app-sidebar footer a:hover,
+aside.app-sidebar footer button:hover {
+	background: #ee0087;
+}
+
+#page-cadastro-contratante main {
+	flex: 1;
+}
+
+/* Form */
+
+#page-cadastro-contratante .wrapper {
+	width: 40%;
+	margin: 50px auto;
+
+	background: #fff;
+	border: 1px solid #dbdbdb;
 
 	justify-content: center;
 	align-items: center;
 
-	border-radius: 25px;
+	border-radius: 20px;
 
-	margin: 15vh auto;
-
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-	width: 0px;
+	overflow: hidden;
 }
 
 #page-cadastro-contratante .wrapper input {
@@ -30,10 +74,23 @@
 
 	border: 0.5px solid grey;
 	border-radius: 17px;
+	background-color: #dbdbdb;
 
 	outline: none;
 
 	font-size: 100%;
+
+	margin-top: 13px;
+}
+
+#page-cadastro-contratante .wrapper label {
+	color: #4d6f80;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+
+	margin: 13%;
 }
 
 ::-webkit-input-placeholder {
@@ -44,61 +101,95 @@
 	margin-top: 10px;
 	font-size: 3vh;
 
+	color: #4d6f80;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 44px;
+
 	font-weight: 800;
-	line-height: 50px;
-}
-
-#page-cadastro-contratante .wrapper .txtNome {
-	margin: auto 25%;
-}
-
-#page-cadastro-contratante .wrapper .txtSobrenome {
-	margin-left: 0;
+	line-height: 70px;
 }
 
 input[type='file'] {
 	display: none;
 }
 
-.custom-file-upload {
-	border: 1px dashed black;
-	display: inline-block;
-	padding: 6px 12px;
+#page-cadastro-contratante .wrapper .custom-file-upload {
+	height: 180px;
+	width: 180px;
+	border: 2px dashed #4d6f80;
+	background-color: #dbdbdb;
+	border-radius: 20px;
 	cursor: pointer;
-	width: 50%;
-	height: 170px;
-	margin-left: 25%;
-	background: rgba(94, 94, 94, 0.5);
-	padding: 25px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.images-container {
-	display: grid;
-	grid-gap: 16px;
+hr {
+	width: 80%;
+	margin: auto;
+	height: 1px;
+	color: grey;
+	background-color: #707070;
+	border: 0px solid grey;
+	opacity: 0.2;
 }
 
-.images-container img {
-	width: 200px;
-	height: 170px;
-	object-fit: cover;
-}
+/* media Carries */
 
-/* Telefones em paisagem e abaixo*/
+@media only screen and (max-width: 1000px) {
+	/* Aside */
 
-@media screen and (min-width: 1080px) {
-	.wrapper {
-		max-height: 500px;
+	aside.app-sidebar {
+		position: fixed;
+		height: 10%;
+		width: 100%;
+		padding: 32px 24px;
+		background: linear-gradient(
+			170deg,
+			rgba(189, 5, 109, 1) 0%,
+			rgba(189, 5, 109, 1) 48%,
+			rgba(196, 17, 118, 1) 100%
+		);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 	}
-}
 
-@media screen and (min-width: 1500px) {
-	.wrapper {
-		max-height: 800px;
+	/* Formulario */
+
+	#page-cadastro-contratante .wrapper {
+		width: 80%;
+		margin-top: 25%;
+		margin-left: 8%;
+
+		background: #fff;
+		border: 1px solid #dbdbdb;
+
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 20px;
+
+		overflow: hidden;
 	}
-}
 
-@media screen and (max-width: 480px) {
-	.wrapper {
-		max-height: 470px;
+	#page-cadastro-contratante .wrapper h1 {
+		font-size: 3.5vh;
+
+		color: #4d6f80;
+		font-family: Nunito;
+		font-style: normal;
+		font-weight: bold;
+		line-height: 44px;
+
+		font-weight: 800;
+		line-height: 70px;
 	}
 }
