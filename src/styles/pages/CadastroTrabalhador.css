@@ -1,49 +1,195 @@
-#page-cadastro-trabalhador .wrapper {
-	width: 55vh;
+#page-cadastro-trabalhador {
+	background-color: white;
+	display: flex;
+	width: 100vw;
+}
+
+/* Aside */
+
+aside.app-sidebar {
+	position: fixed;
 	height: 100%;
+	width: 10%;
+	padding: 32px 24px;
 	background: linear-gradient(
 		170deg,
 		rgba(189, 5, 109, 1) 0%,
 		rgba(189, 5, 109, 1) 48%,
 		rgba(196, 17, 118, 1) 100%
 	);
-	box-shadow: 3px 5px 5px 5px rgba(248, 10, 89, 0.3);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+aside.app-sidebar footer a,
+aside.app-sidebar footer button {
+	width: 60px;
+	height: 60px;
+
+	background: #d00176;
+	border: 0;
+	border-radius: 25px;
+
+	cursor: pointer;
+
+	transition: background-color 0.2s;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+aside.app-sidebar footer a:hover,
+aside.app-sidebar footer button:hover {
+	background: #ee0087;
+}
+
+#page-cadastro-trabalhador main {
+	flex: 1;
+}
+
+/* Form */
+
+#page-cadastro-trabalhador .wrapper {
+	width: 40%;
+	margin: 50px auto;
+
+	background: #fff;
+	border: 1px solid #dbdbdb;
 
 	justify-content: center;
 	align-items: center;
 
-	border-radius: 25px;
+	border-radius: 20px;
 
-	margin: 15vh auto;
+	overflow: hidden;
 }
 
-.wrapper input {
+#page-cadastro-trabalhador .wrapper input {
 	height: 6.3vh;
 	padding: 0 10px;
 
 	border: 0.5px solid grey;
 	border-radius: 17px;
+	background-color: #dbdbdb;
 
 	outline: none;
 
 	font-size: 100%;
+
+	margin-top: 13px;
+}
+
+#page-cadastro-trabalhador .wrapper label {
+	color: #4d6f80;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+
+	margin: 13%;
 }
 
 ::-webkit-input-placeholder {
 	color: #9f9e9e;
 }
 
-.wrapper h1 {
+#page-cadastro-trabalhador .wrapper h1 {
+	margin-top: 10px;
 	font-size: 3vh;
 
+	color: #4d6f80;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 44px;
+
 	font-weight: 800;
-	line-height: 50px;
+	line-height: 70px;
 }
 
-.wrapper .txtNome {
-	margin: auto 25%;
+input[type='file'] {
+	display: none;
 }
 
-.wrapper .txtSobrenome {
-	margin-left: 0;
+#page-cadastro-trabalhador .wrapper .custom-file-upload {
+	height: 180px;
+	width: 180px;
+	border: 2px dashed #4d6f80;
+	background-color: #dbdbdb;
+	border-radius: 20px;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+hr {
+	width: 80%;
+	margin: auto;
+	height: 1px;
+	color: grey;
+	background-color: #707070;
+	border: 0px solid grey;
+	opacity: 0.2;
+}
+
+/* media Carries */
+
+@media only screen and (max-width: 1000px) {
+	/* Aside */
+
+	aside.app-sidebar {
+		position: fixed;
+		height: 10%;
+		width: 100%;
+		padding: 32px 24px;
+		background: linear-gradient(
+			170deg,
+			rgba(189, 5, 109, 1) 0%,
+			rgba(189, 5, 109, 1) 48%,
+			rgba(196, 17, 118, 1) 100%
+		);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/* Formulario */
+
+	#page-cadastro-trabalhador .wrapper {
+		width: 80%;
+		margin-top: 25%;
+		margin-left: 8%;
+
+		background: #fff;
+		border: 1px solid #dbdbdb;
+
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 20px;
+
+		overflow: hidden;
+	}
+
+	#page-cadastro-trabalhador .wrapper h1 {
+		font-size: 2.7vh;
+
+		color: #4d6f80;
+		font-family: Nunito;
+		font-style: normal;
+		font-weight: bold;
+		line-height: 44px;
+
+		font-weight: 800;
+		line-height: 70px;
+	}
 }
