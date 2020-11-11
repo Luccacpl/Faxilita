@@ -181,19 +181,20 @@ hr {
 
 	/* Formulario */
 
-	#page-cadastro-trabalhador .wrapper input {
-		height: 6.3vh;
-		padding: 0 10px;
+	#page-cadastro-trabalhador .wrapper {
+		width: 80%;
+		margin-top: 25%;
+		margin-left: 8%;
 
-		border: 0.5px solid grey;
-		border-radius: 17px;
-		background-color: #dbdbdb;
+		background: #fff;
+		border: 1px solid #dbdbdb;
 
-		outline: none;
+		justify-content: center;
+		align-items: center;
 
-		font-size: 100%;
+		border-radius: 20px;
 
-		margin-top: 13px;
+		overflow: hidden;
 	}
 
 	#page-cadastro-trabalhador .wrapper h1 {
