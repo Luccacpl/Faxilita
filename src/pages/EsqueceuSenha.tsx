@@ -68,7 +68,9 @@ function EsqueceuSenha(){
                 </Grid>
 
                 <Grid item xs={12}>
-                    <CustomButton text="Login" style={Object.assign({}, botao, styleBlue)}/>
+                    <Link to="/" className="link">
+                        <CustomButton text="Login" style={Object.assign({}, botao, styleBlue)}/>
+                    </Link>
                 </Grid>
             </Grid>
         </div>

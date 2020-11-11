@@ -8,4 +8,5 @@ body {
 	color: #fff;
 	background: #fff;
 	overflow-x: hidden;
+	overflow-y: auto;
 }
