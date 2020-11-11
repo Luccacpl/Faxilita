@@ -46,47 +46,47 @@ function Login(){
     const classes = useStyles();
 
     return(
-        <div className={`${classes.root} page-login`}>
+            <div id="page-login">
 
-            <Grid container spacing={3}>
+                <Grid container spacing={3}>
 
-                <Grid item xs={12}>
-                    <h1 className={classes.title}>Faxilita</h1>
-                </Grid>
+                    <Grid item xs={12}>
+                        <h1 className={classes.title}>Faxilita</h1>
+                    </Grid>
 
-                <Grid item xs={12}>
-                    <input  placeholder="Username" />
-                </Grid>
+                    <Grid item xs={12}>
+                        <input  placeholder="Username" />
+                    </Grid>
 
-                <Grid item xs={12}>
-                    <input  type="password" placeholder="Password"/>
-                    <aside className="asideEsquerda">
-                        <Link to="/RecuperarSenha" className="link1">
-                            <p>Esqueceu a senha?</p>
+                    <Grid item xs={12}>
+                        <input  type="password" placeholder="Password"/>
+                        <aside className="asideEsquerda">
+                            <Link to="/RecuperarSenha" className="link1">
+                                <p>Esqueceu a senha?</p>
+                            </Link>
+                        </aside>
+                        
+                        <aside className="asideDireita">
+                            <Link to="/cadastro" className="link2">
+                                <p>Ainda não é membro?</p>
+                            </Link>
+                        </aside>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Link to="/" className="link2">
+                            <CustomButton text="Login" style={Object.assign({}, Botao, styleBlue)}/>
                         </Link>
-                    </aside>
+                    </Grid>
                     
-                    <aside className="asideDireita">
+                    <Grid item xs={12}>
                         <Link to="/cadastro" className="link2">
-                            <p>Ainda não é membro?</p>
+                            <CustomButton text="Cadastrar" style={Object.assign({}, Botao, stylePink)} />
                         </Link>
-                    </aside>
-                </Grid>
+                    </Grid>
 
-                <Grid item xs={12}>
-                    <Link to="/" className="link2">
-                        <CustomButton text="Login" style={Object.assign({}, Botao, styleBlue)}/>
-                    </Link>
                 </Grid>
-                
-                <Grid item xs={12}>
-                    <Link to="/cadastro" className="link2">
-                        <CustomButton text="Cadastrar" style={Object.assign({}, Botao, stylePink)} />
-                    </Link>
-                </Grid>
-
-            </Grid>
-        </div>
+            </div>
     );
 }
 

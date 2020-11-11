@@ -1,4 +1,8 @@
-.page-login {
+body {
+	overflow: hidden;
+}
+
+#page-login {
 	width: 50vh;
 	height: 100%;
 	background: linear-gradient(
@@ -14,20 +18,18 @@
 
 	border-radius: 25px;
 
-	margin: 15vh auto;
+	margin: 25vh auto;
+
+	max-width: 400px;
 }
 
-.page-login h1 {
+#page-login h1 {
+	font-size: 5vh;
 	line-height: 70px;
 	margin-top: 20px;
 }
 
-.page-login .txtPassword {
-	border-radius: 17px;
-	outline: none;
-}
-
-input {
+#page-login input {
 	width: 75%;
 	height: 6.3vh;
 	padding: 0 10px;
@@ -40,15 +42,27 @@ input {
 	margin: auto 12.5%;
 
 	font-size: 100%;
+
+	max-height: 50px;
 }
 
 .link1 {
 	color: white;
 	text-decoration: none;
 
-	font-size: 2vh;
+	font-size: 1vw;
 	font-weight: bold;
 	font-style: italic;
+}
+
+.link2 {
+	color: white;
+	text-decoration: none;
+
+	font-size: 1vw;
+	font-weight: 800;
+	font-style: italic;
+	display: flex;
 }
 
 .asideEsquerda {
@@ -68,32 +82,84 @@ input {
 	margin-top: 5px;
 }
 
-.link2 {
-	color: white;
-	text-decoration: none;
-
-	font-size: 2vh;
-	font-weight: 800;
-	font-style: italic;
-	display: flex;
-}
-
-.page-login .btnCadastro {
+#page-login .btnCadastro {
 	width: 75%;
 	height: 6.3vh;
 
-	background: linear-gradient(
-		114deg,
-		rgba(255, 97, 129, 1) 0%,
-		rgba(255, 97, 129, 1) 50%,
-		rgba(255, 95, 128, 1) 100%
-	);
-	box-shadow: 0 3px 5px 2px rgba(0, 10, 12, 0.3);
-	border-radius: 20px;
-
-	color: white;
-	font-weight: 800;
-
 	margin: auto 12.5%;
 	margin-bottom: 20px;
+}
+
+/* media carries */
+
+@media only screen and (max-width: 1000px) {
+	#page-login {
+		width: 100%;
+		height: 100vh;
+
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 0px;
+
+		margin: 0px;
+
+		overflow: hidden;
+	}
+
+	#page-login h1 {
+		font-size: 9vh;
+		margin-top: 80px;
+	}
+
+	#page-login input {
+		height: 10vh;
+
+		margin-top: 10px;
+	}
+
+	.link1 {
+		color: white;
+		text-decoration: none;
+
+		font-size: 5vw;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	.link2 {
+		color: white;
+		text-decoration: none;
+
+		font-size: 5vw;
+		font-weight: 800;
+		font-style: italic;
+		display: flex;
+
+		text-align: center;
+
+		margin-top: 10px;
+	}
+
+	.asideEsquerda {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.asideEsquerda p {
+		text-align: center;
+	}
+
+	.asideDireita {
+		width: 100%;
+	}
+
+	.asideDireita p {
+		margin: auto;
+	}
+
+	#page-login .btnLogin {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }
