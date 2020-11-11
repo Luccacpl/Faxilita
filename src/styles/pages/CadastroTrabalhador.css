@@ -134,8 +134,8 @@ input[type='file'] {
 }
 
 #page-cadastro-trabalhador .wrapper .custom-file-upload {
-	height: 180px;
-	width: 180px;
+	height: 20vh;
+	width: 20vh;
 	border: 2px dashed #4d6f80;
 	background-color: #dbdbdb;
 	border-radius: 20px;
@@ -144,6 +144,8 @@ input[type='file'] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	margin: 3%;
 }
 
 hr {
@@ -208,5 +210,23 @@ hr {
 
 		font-weight: 800;
 		line-height: 70px;
+	}
+
+	#page-cadastro-trabalhador .wrapper .custom-file-upload {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin: auto;
+	}
+
+	hr {
+		width: 80%;
+		margin: auto;
+		height: 1px;
+		color: black;
+		background-color: black;
+		border: 1px solid black;
+		opacity: 1;
 	}
 }

@@ -132,19 +132,27 @@ function CadastroTrabalhador(){
                         </Grid>
 
                         <Grid item xs={12} className="fixed">
-                                <h1 className={classes.Title}>Foto</h1>
+                                <h1 className={classes.Title}>Insira sua Foto</h1>
                         </Grid>
 
                         <Grid item xs={12}>
                             <hr />
                         </Grid>
 
-                        <Grid item xs={12}>
+                        <Grid item xs={12} sm={4}>
+                            <div></div>
+                        </Grid>
+
+                        <Grid item xs={12} sm={4}>
                             <label className="custom-file-upload">
                                 <FiPlus size={24} color="black"/>
                                 <input onChange={handleSelectedImages} type="file">
                                 </input>
                             </label>
+                        </Grid>
+
+                        <Grid item xs={12} sm={4}>
+                            <div></div>
                         </Grid>
 
                         <Grid item xs={12}>
