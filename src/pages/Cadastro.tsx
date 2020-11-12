@@ -27,6 +27,8 @@ const Botao = {
   borderRadius:" 20px",
   
   color:" white",
+
+  maxHeight:"40px",
 }
 
 const styleBlue = {
@@ -39,28 +41,28 @@ function Cadastro() {
     const classes = useStyles();
 
     return(
-        <div className={`${classes.root} page-cadastro`}>
-            <Grid container spacing={2}>
+        <div id="page-cadastro">
 
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <h1 className={classes.Title}> Registrar novo usuário </h1>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                   <Link to="/cadastro/1" className="link1">
+                   <Link to="/cadastro/1" className="link">
                       <CustomButton text="Contratante" style={Object.assign({}, Botao, styleBlue)}/>
                     </Link>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                  <Link to="/cadastro/2" className="link1">
+                  <Link to="/cadastro/2" className="link">
                     <CustomButton text="trabalhador" style={Object.assign({}, Botao, styleBlue)}/>
                   </Link>     
                 </Grid>
 
                 <Grid item xs={12}></Grid>
+            </Grid>  
 
-            </Grid>            
         </div>
     );
 }
