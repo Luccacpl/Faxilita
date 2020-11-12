@@ -6,7 +6,7 @@
 
 /* Aside */
 
-aside.app-sidebar {
+#page-cadastro-trabalhador aside.app-sidebar {
 	position: fixed;
 	height: 100%;
 	width: 10%;
@@ -163,7 +163,7 @@ hr {
 @media only screen and (max-width: 1000px) {
 	/* Aside */
 
-	#page-cadastro-contratante aside.app-sidebar {
+	#page-cadastro-trabalhador aside.app-sidebar {
 		position: fixed;
 		height: 10%;
 		width: 100%;

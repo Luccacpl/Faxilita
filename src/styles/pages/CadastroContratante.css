@@ -148,7 +148,7 @@ input[type='file'] {
 	margin: 3%;
 }
 
-#page-cadastro-contratante hr {
+hr {
 	width: 80%;
 	margin: auto;
 	height: 1px;
@@ -163,7 +163,7 @@ input[type='file'] {
 @media only screen and (max-width: 1000px) {
 	/* Aside */
 
-	aside.app-sidebar {
+	#page-cadastro-contratante aside.app-sidebar {
 		position: fixed;
 		height: 10%;
 		width: 100%;
