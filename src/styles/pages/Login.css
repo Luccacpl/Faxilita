@@ -1,0 +1,161 @@
+#page-login {
+	width: 50vh;
+	height: 100%;
+	background: linear-gradient(
+		170deg,
+		rgba(189, 5, 109, 1) 0%,
+		rgba(189, 5, 109, 1) 48%,
+		rgba(196, 17, 118, 1) 100%
+	);
+	box-shadow: 3px 5px 5px 5px rgba(248, 10, 89, 0.3);
+
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 25px;
+
+	margin: 20vh auto;
+
+	max-width: 400px;
+}
+
+#page-login h1 {
+	font-size: 5vh;
+	line-height: 70px;
+	margin-top: 20px;
+}
+
+#page-login input {
+	width: 75%;
+	height: 6.3vh;
+	padding: 0 10px;
+
+	border: 0.5px solid grey;
+	border-radius: 17px;
+
+	outline: none;
+
+	margin: auto 12.5%;
+
+	font-size: 100%;
+
+	max-height: 50px;
+}
+
+.link1 {
+	color: white;
+	text-decoration: none;
+
+	font-size: 1vw;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.link2 {
+	color: white;
+	text-decoration: none;
+
+	font-size: 1vw;
+	font-weight: 800;
+	font-style: italic;
+	display: flex;
+}
+
+.asideEsquerda {
+	width: 50%;
+	float: left;
+	margin-top: 5px;
+}
+
+.asideEsquerda p {
+	text-align: right;
+	margin-right: 10px;
+}
+
+.asideDireita {
+	width: 50%;
+	float: right;
+	margin-top: 5px;
+}
+
+#page-login .btnCadastro {
+	width: 75%;
+	height: 6.3vh;
+
+	margin: auto 12.5%;
+	margin-bottom: 20px;
+}
+
+/* media carries */
+
+@media only screen and (max-width: 1000px) {
+	#page-login {
+		width: 100%;
+		height: 100vh;
+
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 0px;
+
+		margin: 0px;
+
+		overflow: hidden;
+	}
+
+	#page-login h1 {
+		font-size: 9vh;
+		margin-top: 80px;
+	}
+
+	#page-login input {
+		height: 10vh;
+
+		margin-top: 10px;
+	}
+
+	.link1 {
+		color: white;
+		text-decoration: none;
+
+		font-size: 5vw;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	.link2 {
+		color: white;
+		text-decoration: none;
+
+		font-size: 5vw;
+		font-weight: 800;
+		font-style: italic;
+		display: flex;
+
+		text-align: center;
+
+		margin-top: 10px;
+	}
+
+	.asideEsquerda {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.asideEsquerda p {
+		text-align: center;
+	}
+
+	.asideDireita {
+		width: 100%;
+	}
+
+	.asideDireita p {
+		margin: auto;
+	}
+
+	#page-login .btnLogin {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
