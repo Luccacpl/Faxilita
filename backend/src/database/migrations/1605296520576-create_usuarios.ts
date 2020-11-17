@@ -1,36 +1,36 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class createContratantes1605296520576 implements MigrationInterface {
+export class createUsuarios1605296520576 implements MigrationInterface {
 
       // Realiza alterações no BD
       // Criar Tabela, criar novo campo, deletar algum campo
 
   public async up(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.createTable(new Table({
-        name: 'contratantes',
+        name: 'usuarios',
         columns : [
           {
-            name: 'cd_cpf_contratante',
+            name: 'cd_cpf_usuario',
             type: 'integer',
-            unsigned: true,
+            unsigned: true,               // não pode ser negativo
             isPrimary: true,
             isGenerated: false,
           },
           {
-            name: 'nm_contratante',
+            name: 'nm_usuario',
             type: 'varchar'
           },
           {
-            name: 'dt_nascimento_contratante',
+            name: 'dt_nasc_usuario',
             type: 'date'
           },
           {
-            name: 'ds_contratante',
+            name: 'ds_usuario',
             type: 'text'
           },
           {
-            name: 'ic_sexo_contratante',
-            type: 'boolean'
+            name: 'cd_genero_usuario',
+            type: 'enum'
           }
         ],
       }))
@@ -43,3 +43,6 @@ export class createContratantes1605296520576 implements MigrationInterface {
   }
 
 }
+
+//yarn typeorm migrations:run
+//yarn typeorm migrations:revert
