@@ -18,4 +18,15 @@ export default class Usuario {
     @Column()
     cd_genero_usuario: string;
 
+    @Column()
+    nr_celular: number;
+
+    @Column()
+    email: string;
+
+    @Column()
+    senha: string;
+
+    @Column()
+    pathImage: string;
 }

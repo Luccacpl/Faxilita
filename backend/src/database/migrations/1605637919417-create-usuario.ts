@@ -31,6 +31,22 @@ export class createUsuario1605637919417 implements MigrationInterface {
               {
                 name: 'cd_genero_usuario',
                 type: 'enum'
+              },
+              {
+                name: 'nr_celular',
+                type: 'integer'
+              },
+              {
+                name: 'email',
+                type: 'varchar'
+              },
+              {
+                name: 'senha',
+                type: 'varchar'
+              },
+              {
+                name: 'pathImage',
+                type: 'varchar'
               }
             ],
           }))
