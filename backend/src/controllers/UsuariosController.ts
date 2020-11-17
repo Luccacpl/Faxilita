@@ -38,7 +38,6 @@ export default {
             dt_nasc_usuario,
             ds_usuario,
             cd_genero_usuario,
-
         });
 
     
