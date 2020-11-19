@@ -1,8 +1,9 @@
-import { Request, Response } from 'express';                     //importação pro typescript entender o formato to request e do response
+import { Request, Response } from 'express';                                            //importação pro typescript entender o formato to request e do response
 import { getRepository } from 'typeorm';
 import Usuario from '../models/Usuario';
-import * as Yup from 'yup';                                      // importação para validações
-import Bcrypt from 'bcrypt';                                    // importação para criptografia
+import * as Yup from 'yup';                                                             // importação para validações
+import Bcrypt from 'bcrypt';                                                            // importação para criptografia
+import UsuarioView from '../views/Usuario.view';
 
 export default {
     async index(request: Request, response: Response) {
@@ -10,7 +11,7 @@ export default {
     
         const usuarios = await usuarioRepository.find();
 
-        return response.json(usuarios);
+        return response.json(UsuarioView.renderMany(usuarios));
     },
 
     async show(request: Request, response: Response) {
@@ -20,10 +21,10 @@ export default {
     
         const usuario = await usuarioRepository.findOneOrFail(cd_cpf_usuario);
 
-        return response.json(usuario);
+        return response.json(UsuarioView.render(usuario));                              // Fazer ele retornar apenas conteudo dentro da View
     },
  
-    async create(request: Request, response: Response) {                                // Definindo o tipo do request e do response atravess da importação do express
+    async create(request: Request, response: Response) {                                // Definindo o tipo do request e do response atraves da importação do express
         let {
             cd_cpf_usuario,
             nm_usuario,
@@ -52,10 +53,9 @@ export default {
             console.log('senha incorreta');
         }
 
-
         const usuarioRepository = getRepository(Usuario);                                
 
-        const {filename} = request.file;
+        const {filename} = request.file;                                                 // Desestruturando o request de um arquivo para pegar o nome dele para guardar no BD
 
         const pathImage = filename;
 
@@ -72,16 +72,21 @@ export default {
         };
 
         const schema = Yup.object().shape({
-            cd_cpf_usuario: Yup.number().required().max(11),
-            nm_usuario: Yup.string().required(),
-            dt_nasc_usuario: Yup.date().required(),
-            ds_usuario: Yup.string(),
-            cd_genero_usuaro: Yup.string().required().max(1),
-            nr_celular: Yup.number().required(),
-            email: Yup.string().email().required(),
-            senha: Yup.string().required(),
+            cd_cpf_usuario: Yup.number().required('CPF obrigatório'),
+            nm_usuario: Yup.string().required('Nome obrigatório'),
+            dt_nasc_usuario: Yup.date().required('data de nsacimento obrigatória'),
+            ds_usuario: Yup.string().max(300),
+            cd_genero_usuario: Yup.string().required('Genero obrigatório').max(1),
+            nr_celular: Yup.number().required('Numero de celular obrigatório'),
+            email: Yup.string().email().required('Email obrigatório'),
+            senha: Yup.string().required('Senha obrigatória'),
+            pathImage: Yup.string()
         });
     
+        await schema.validate(data, {                                                   // Comando que faz as validações que foram passadas atraves da constante schema com o conteudo da constante data
+            abortEarly: false,
+        })
+
         const usuario = usuarioRepository.create(data);
 
     
