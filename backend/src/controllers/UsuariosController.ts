@@ -33,7 +33,7 @@ export default {
             cd_genero_usuario,
             nr_celular,
             email,
-            senha
+            senha,
         } = request.body;
     
         console.log(senha);
@@ -59,6 +59,10 @@ export default {
 
         const pathImage = filename;
 
+        const { cd_tipo_usuario } = request.body;
+
+        console.log(cd_tipo_usuario);
+
         const data = {
             cd_cpf_usuario,
             nm_usuario,
@@ -68,26 +72,32 @@ export default {
             nr_celular,
             email,
             senha,
-            pathImage
+            pathImage,
+            cd_tipo_usuario
         };
 
         const schema = Yup.object().shape({
             cd_cpf_usuario: Yup.number().required('CPF obrigatório'),
             nm_usuario: Yup.string().required('Nome obrigatório'),
-            dt_nasc_usuario: Yup.date().required('data de nsacimento obrigatória'),
-            ds_usuario: Yup.string().max(300),
+             ds_usuario: Yup.string().max(300),
             cd_genero_usuario: Yup.string().required('Genero obrigatório').max(1),
             nr_celular: Yup.number().required('Numero de celular obrigatório'),
             email: Yup.string().email().required('Email obrigatório'),
             senha: Yup.string().required('Senha obrigatória'),
-            pathImage: Yup.string()
-        });
+            pathImage: Yup.string(),
+            dt_nasc_usuario: Yup.date().required('data de nsacimento obrigatória'),
+            cd_tipo_usuario: Yup.number().required('Tipo do usuario obrigatorio').max(1)
+        }); 
+          
+        
     
         await schema.validate(data, {                                                   // Comando que faz as validações que foram passadas atraves da constante schema com o conteudo da constante data
             abortEarly: false,
         })
 
         const usuario = usuarioRepository.create(data);
+
+        console.log(usuario);
 
     
         try{

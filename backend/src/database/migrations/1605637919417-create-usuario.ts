@@ -12,7 +12,7 @@ export class createUsuario1605637919417 implements MigrationInterface {
               {
                 name: 'cd_cpf_usuario',
                 type: 'integer',
-                unsigned: true,               // não pode ser negativo
+                unsigned: true,                                                                   // não pode ser negativo
                 isPrimary: true,
                 isGenerated: false,
               },
@@ -47,8 +47,20 @@ export class createUsuario1605637919417 implements MigrationInterface {
               {
                 name: 'pathImage',
                 type: 'varchar'
+              },
+              {
+                name: 'cd_tipo_usuario',
+                type: 'integer'
               }
             ],
+            foreignKeys: [
+              {
+                name: 'UserType',
+                columnNames: ['cd_tipo_usuario'],
+                referencedTableName: 'tipo_usuario',
+                referencedColumnNames: ['cd_tipo_usuario']
+              }
+            ]
           }))
 
     }

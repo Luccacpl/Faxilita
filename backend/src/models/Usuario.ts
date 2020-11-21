@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryColumn, OneToOne, JoinColumn } from 'typeorm';
+import TipoUsuario from './TipoUsuario';
 
 
 @Entity('usuarios')
@@ -29,4 +30,12 @@ export default class Usuario {
 
     @Column()
     pathImage: string;
+
+    @Column()
+    cd_tipo_usuario: number;
+
+    @OneToOne(() => TipoUsuario)
+    @JoinColumn({ name: 'cd_tipo_usuario' })
+    tipo_usuario: TipoUsuario;
+
 }
