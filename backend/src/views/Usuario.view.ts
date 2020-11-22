@@ -14,6 +14,7 @@ export default {
             nr_celular: usuario.nr_celular,
             email: usuario.email,
             url: `http://localhost:3333/uploads/${usuario.pathImage}`,
+            cd_tipo_usuario: usuario.cd_tipo_usuario,
         };
     },
 

@@ -85,7 +85,7 @@ export default {
             email: Yup.string().email().required('Email obrigatório'),
             senha: Yup.string().required('Senha obrigatória'),
             pathImage: Yup.string(),
-            dt_nasc_usuario: Yup.date().required('data de nsacimento obrigatória'),
+            dt_nasc_usuario: Yup.date().required('data de nascimento obrigatória'),
             cd_tipo_usuario: Yup.number().required('Tipo do usuario obrigatorio').max(1)
         }); 
           
