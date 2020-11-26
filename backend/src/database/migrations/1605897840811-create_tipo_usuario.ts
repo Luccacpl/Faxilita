@@ -26,7 +26,7 @@ export class createTipoUsuario1605897840811 implements MigrationInterface {
             cd_tipo_usuario: 1 , nm_tipo_usuario: 'Contratante'
           },
           {
-            cd_tipo_usuario: 2 , nm_tipo_usuario: 'Trabalhador'
+            cd_tipo_usuario: 0 , nm_tipo_usuario: 'Trabalhador'
           }
         ])
         .execute();

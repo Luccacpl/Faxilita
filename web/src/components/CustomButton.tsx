@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
  export default function CustomButton(props:any) {
     return (
-        <Button variant="contained" color="primary" style={props.style}>
+        <Button type="submit" variant="contained" color="primary" style={props.style}>
             {props.text}
         </Button>
     );

@@ -17,5 +17,7 @@ app.use(routes);
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));                   // Definindo caminho pra poder acessar as imagens que foram upadas
 app.use(errorHandler);
 
+console.log('Server aberto!');
+
 app.listen(3333);                                                                             //localhost:3333
 

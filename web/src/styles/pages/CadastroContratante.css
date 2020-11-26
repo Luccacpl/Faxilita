@@ -100,6 +100,13 @@ aside.app-sidebar footer button:hover {
 	margin-top: 13px;
 }
 
+#page-cadastro-contratante .wrapper input.radio {
+	height: 2vh;
+	display: inline;
+
+	margin-left: 13%;
+}
+
 #page-cadastro-contratante .wrapper label {
 	color: #4d6f80;
 	font-family: Nunito;
@@ -108,6 +115,11 @@ aside.app-sidebar footer button:hover {
 	font-size: 16px;
 
 	margin: 13%;
+}
+
+#page-cadastro-contratante .wrapper label.lblRadio {
+
+	margin-left: 38%;
 }
 
 ::-webkit-input-placeholder {

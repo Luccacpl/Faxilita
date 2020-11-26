@@ -55,9 +55,9 @@ export default {
 
         const usuarioRepository = getRepository(Usuario);                                
 
-        const {filename} = request.file;                                                 // Desestruturando o request de um arquivo para pegar o nome dele para guardar no BD
+        //const {filename} = request.file;                                                 // Desestruturando o request de um arquivo para pegar o nome dele para guardar no BD
 
-        const pathImage = filename;
+        //const pathImage = filename;
 
         const { cd_tipo_usuario } = request.body;
 
@@ -72,28 +72,28 @@ export default {
             nr_celular,
             email,
             senha,
-            pathImage,
+            //pathImage,
             cd_tipo_usuario
         };
 
         const schema = Yup.object().shape({
             cd_cpf_usuario: Yup.number().required('CPF obrigatório'),
             nm_usuario: Yup.string().required('Nome obrigatório'),
-             ds_usuario: Yup.string().max(300),
-            cd_genero_usuario: Yup.string().required('Genero obrigatório').max(1),
+            ds_usuario: Yup.string().max(300),
+            cd_genero_usuario: Yup.string().max(1).required('Genero obrigatório'),
             nr_celular: Yup.number().required('Numero de celular obrigatório'),
             email: Yup.string().email().required('Email obrigatório'),
             senha: Yup.string().required('Senha obrigatória'),
             pathImage: Yup.string(),
             dt_nasc_usuario: Yup.date().required('data de nascimento obrigatória'),
-            cd_tipo_usuario: Yup.number().required('Tipo do usuario obrigatorio').max(1)
+            cd_tipo_usuario: Yup.number().max(1).required('Tipo do usuario obrigatorio'),
         }); 
           
         
     
         await schema.validate(data, {                                                   // Comando que faz as validações que foram passadas atraves da constante schema com o conteudo da constante data
             abortEarly: false,
-        })
+        }) 
 
         const usuario = usuarioRepository.create(data);
 
